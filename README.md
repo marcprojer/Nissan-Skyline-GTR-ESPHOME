@@ -12,8 +12,8 @@ This project controls lighting for a Nissan Skyline GTR model car using ESPHome 
 
 ### GPIO Pin Assignments
 - **GPIO 18**: Underbody lighting (via relay - LOW active)
-- **GPIO 19**: Turn signals/blinkers (via relay - LOW active) 
-- **GPIO 21**: Headlights (direct LED control - HIGH active)
+- **GPIO 19**: Turn signals/blinkers (via relay - LOW active) --> WIP!
+- **GPIO 21**: Headlights (direct LED control - HIGH active) --> WIP!
 
 ### Components
 - **2x Relays**: For underbody lighting and blinkers (LOW-active)
@@ -44,4 +44,4 @@ The following entities are exposed to Home Assistant:
 
 ## Project Image
 
-![Nissan Skyline GTR Model](path/to/your/image.jpg)
+![Nissan Skyline GTR Model](IMG_1475.jpg)
