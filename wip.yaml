@@ -16,11 +16,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "OPqQOatFtDTMVLVbkcan52ibmg/7Qnf9FCqlJQ2eS8I="
+    key: !secret api_key_GTR
 
 ota:
   - platform: esphome
-    password: "b4ad4c7bae5ac7f5c4daf9206e8c0593"
+    password: !secret ota_pw_GTR
 
 wifi:
   ssid: !secret wifi_ssid
@@ -29,7 +29,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Nissan-Skyline-Gtr"
-    password: "dLkUhA7eW6B5"
+    password: !secret fb_pw_GTR
 
 captive_portal:
 
