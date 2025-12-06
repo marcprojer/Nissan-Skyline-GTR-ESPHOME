@@ -41,16 +41,6 @@ captive_portal:
 
 # Relais und Beleuchtung Definitionen
 switch:
-  # Scheinwerfer als Switch (direkt LED, kein Relais)
-  - platform: gpio
-    name: "Scheinwerfer"
-    id: headlights
-    pin:
-      number: GPIO19
-      mode:
-        output: true
-    inverted: false  # LEDs direkt angesteuert
-    icon: "mdi:car-light-fog"
 
 # Output Definitionen
 output:
@@ -72,6 +62,15 @@ output:
     inverted: true
     id: blinker_output
 
+  # Scheinwerfer Output
+  - platform: gpio
+    pin:
+      number: GPIO19
+      mode:
+        output: true
+    inverted: false
+    id: headlight_output
+
 light:
   # Unterboden-Beleuchtung als Light
   - platform: binary
@@ -79,6 +78,13 @@ light:
     id: underbody_lights
     output: underbody_output
     icon: "mdi:car-light-high"
+
+  # Scheinwerfer als Light
+  - platform: binary
+    name: "Scheinwerfer"
+    id: headlights
+    output: headlight_output
+    icon: "mdi:car-light-fog"
 
   # Blinker Light mit Blinkeffekt
   - platform: binary
