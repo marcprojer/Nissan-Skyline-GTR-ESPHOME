@@ -68,7 +68,7 @@ output:
       number: GPIO19
       mode:
         output: true
-    inverted: false
+    inverted: true
     id: headlight_output
 
 light:
