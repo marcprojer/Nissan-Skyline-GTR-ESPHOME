@@ -35,8 +35,8 @@ captive_portal:
 
 # GPIO Pin Definitionen
 # Relais 1: Unterboden-Beleuchtung (GPIO 18)
-# Relais 2: Blinker (GPIO 19) 
-# Scheinwerfer: Direkt an GPIO (GPIO 21)
+# Relais 2: Blinker (GPIO 21) 
+# Scheinwerfer: Direkt an GPIO (GPIO 19)
 # Hinweis: Viele Relais sind LOW-aktiv (inverted: true)
 
 # Relais und Beleuchtung Definitionen
@@ -46,7 +46,7 @@ switch:
     name: "Scheinwerfer"
     id: headlights
     pin:
-      number: GPIO21
+      number: GPIO19
       mode:
         output: true
     inverted: false  # LEDs direkt angesteuert
@@ -66,7 +66,7 @@ output:
   # Blinker Output
   - platform: gpio
     pin:
-      number: GPIO19
+      number: GPIO21
       mode:
         output: true
     inverted: true
